@@ -12,7 +12,8 @@ create xi_buffer xi_bufsize allot
         xi_buffer dup xi_stringsize stdin read-line 
         throw   \ return code
         while   \ not-eof
-        evaluate
+        evaluate cr
+        stdout flush-file throw
     repeat
     bye
     ;
